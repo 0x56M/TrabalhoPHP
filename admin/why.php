@@ -2,12 +2,12 @@
 <html>
 
 <head>
-  <!-- Basic -->
+
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <!-- Mobile Metas -->
+
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <!-- Site Metas -->
+
   <meta name="keywords" content="" />
   <meta name="description" content="" />
   <meta name="author" content="" />
@@ -17,15 +17,15 @@
     Cosméticos
   </title>
 
-  <!-- slider stylesheet -->
+
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
 
-  <!-- bootstrap core css -->
+
   <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
 
-  <!-- Custom styles for this template -->
+
   <link href="css/style.css" rel="stylesheet" />
-  <!-- responsive style -->
+
   <link href="css/responsive.css" rel="stylesheet" />
 
   <style>
@@ -51,7 +51,6 @@
 
 <body>
   <div class="hero_area">
-    <!-- header section strats -->
     <header class="header_section">
       <nav class="navbar navbar-expand-lg custom_nav-container ">
         <a class="navbar-brand" href="index.html">
@@ -74,7 +73,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="why.html">
+              <a class="nav-link" href="why.php">
                 Serums
               </a>
             </li>
@@ -110,166 +109,60 @@
 
   <section class="shop_section layout_padding">
     <div class="container">
-      <div class="heading_container heading_center">
-        <h2>
-          Sérums
-        </h2>
+      <div class=" heading_center">
+        <h2>Sérums</h2>
       </div>
-      <div class="row">
-        <!-- Produto 1 -->
-        <div class="col-sm-6 col-md-4 col-lg-3">
-          <div class="box">
-            <button class="add-to-cart-btn">Adicionar</button>
-            <a href="">
-              <div class="img-box">
-                <img src="images/serum1.png" alt="">
-              </div>
-              <div class="detail-box">
-                <h6>Serum Acido Glicolico</h6>
-                <h6>Preço <span>$100</span></h6>
-              </div>
-              <div class="new"><span>New</span></div>
-            </a>
-          </div>
-        </div>
 
-        <!-- Produto 2 -->
-        <div class="col-sm-6 col-md-4 col-lg-3">
-          <div class="box">
-            <button class="add-to-cart-btn">Adicionar</button>
-            <a href="">
-              <div class="img-box">
-                <img src="images/serum2.png" alt="">
-              </div>
-              <div class="detail-box">
-                <h6>Serum Salicilico</h6>
-                <h6>Price <span>$95</span></h6>
-              </div>
-              <div class="new"><span>New</span></div>
-            </a>
-          </div>
-        </div>
+<?php
 
-        <!-- Produto 3 -->
-        <div class="col-sm-6 col-md-4 col-lg-3">
-          <div class="box">
-            <button class="add-to-cart-btn">Adicionar</button>
-            <a href="">
-              <div class="img-box">
-                <img src="images/serum3.png" alt="">
-              </div>
-              <div class="detail-box">
-                <h6>Serum Colágeno</h6>
-                <h6>Price <span>$110</span></h6>
-              </div>
-              <div class="new"><span>New</span></div>
-            </a>
-          </div>
-        </div>
+$conexao = new mysqli("127.0.0.1", "root", "", "lojacosmeticos");
 
-        <!-- Produto 4 -->
-        <div class="col-sm-6 col-md-4 col-lg-3">
-          <div class="box">
-            <button class="add-to-cart-btn">Add to Cart</button>
-            <a href="">
-              <div class="img-box">
-                <img src="images/serum4.png" alt="">
-              </div>
-              <div class="detail-box">
-                <h6>Serum Vit C</h6>
-                <h6>Price <span>$98</span></h6>
-              </div>
-              <div class="new"><span>New</span></div>
-            </a>
-          </div>
-        </div>
+ $sql = "SELECT tipo, imagens, categoria_id FROM produtos WHERE categoria_id = '16'";
 
-        <!-- Produto 5 -->
-        <div class="col-sm-6 col-md-4 col-lg-3">
-          <div class="box">
-            <button class="add-to-cart-btn">Adicionar</button>
-            <a href="">
-              <div class="img-box">
-                <img src="images/serum5.png" alt="">
-              </div>
-              <div class="detail-box">
-                <h6>Serum Niancinamida</h6>
-                <h6>Price <span>$95</span></h6>
-              </div>
-              <div class="new"><span>New</span></div>
-            </a>
-          </div>
-        </div>
+ $resultado = $conexao->query($sql);
+if ($resultado && $resultado->num_rows > 0)
+    {
+      while ($linha = $resultado->fetch_assoc())
+    {
+        echo      "<div style='display: inline-block'>
+                  <div style='width: 200px'>
+                  <div class='box'>
+                        <button class='add-to-cart-btn'>Adicionar</button>
+                        <a href=''>
+                          <div class='img-box'>
+                            <img src='data:" . $linha['tipo'] . ";base64," . $linha['imagens'] . ";base64," . $linha['categoria_id'] . "' />
+                          </div>
+                          <div class='detail-box'>
+                            <h6>Sabonete Mirtilo</h6>
+                            <h6>Preço <span>$80</span></h6>
+                          </div>
+                          <div class='new'><span>New</span></div>
+                        </a> 
+                  </div>
+                  </div>
+                  </div>
+                  ";
+    }
+}
 
-        <!-- Produto 6 -->
-        <div class="col-sm-6 col-md-4 col-lg-3">
-          <div class="box">
-            <button class="add-to-cart-btn">Adicionar</button>
-            <a href="">
-              <div class="img-box">
-                <img src="images/serum6.png" alt="">
-              </div>
-              <div class="detail-box">
-                <h6>Serum Antissinais</h6>
-                <h6>Price <span>$79</span></h6>
-              </div>
-              <div class="new"><span>New</span></div>
-            </a>
-          </div>
-        </div>
+$conexao->close();
 
-        <!-- Produto 7 -->
-        <div class="col-sm-6 col-md-4 col-lg-3">
-          <div class="box">
-            <button class="add-to-cart-btn">Adicionar</button>
-            <a href="">
-              <div class="img-box">
-                <img src="images/serum7.png" alt="">
-              </div>
-              <div class="detail-box">
-                <h6>Serum Uniformizador</h6>
-                <h6>Price <span>$98</span></h6>
-              </div>
-              <div class="new"><span>New</span></div>
-            </a>
-          </div>
-        </div>
-
-        <!-- Produto 8 -->
-        <div class="col-sm-6 col-md-4 col-lg-3">
-          <div class="box">
-            <button class="add-to-cart-btn">Adicionar</button>
-            <a href="">
-              <div class="img-box">
-                <img src="images/serum8.png" alt="">
-              </div>
-              <div class="detail-box">
-                <h6>Serum</h6>
-                <h6>Price <span>$80</span></h6>
-              </div>
-              <div class="new"><span>New</span></div>
-            </a>
-          </div>
-        </div>
-      </div>
+      ?>
     </div>
   </section>
 
-  <!-- end shop section -->
-
-  <!-- info section -->
   <section class="info_section layout_padding2-top">
     <div class="info_container">
       <div class="container">
         <div class="row">
-          <!-- Sobre nós -->
+
           <div class="col-md-6">
             <h6>Sobre nós</h6>
             <p>
               Existimos para criar uma rotina skincare mais completa com a praticidade de fazer os pedidos com entrega garantida e rápida.
             </p>
           </div>
-          <!-- Contact Us -->
+
           <div class="col-md-6">
             <h6>Contato</h6>
             <ul style="list-style: none; padding: 0;">
@@ -292,7 +185,6 @@
     </div>
   </section>
 
-  <!-- Scripts -->
   <script src="js/jquery-3.4.1.min.js"></script>
   <script src="js/bootstrap.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>

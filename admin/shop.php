@@ -29,7 +29,7 @@
           <ul class="navbar-nav">
             <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
             <li class="nav-item active"><a class="nav-link" href="shop.php">Sabonetes</a></li>
-            <li class="nav-item"><a class="nav-link" href="why.html">Serums</a></li>
+            <li class="nav-item"><a class="nav-link" href="why.php">Serums</a></li>
             <li class="nav-item"><a class="nav-link" href="testimonial.html">Feedbacks</a></li>
             <li class="nav-item"><a class="nav-link" href="contact.html">Contato</a></li>
           </ul>
@@ -49,32 +49,38 @@
 
  <section class='shop_section layout_padding'>
                 <div class='container'>
-                  <div class='heading_container heading_center'>
+                  <div class='heading_center'>
                   <h2>Sabonetes</h2>
+                  
 
  <?php
 
  $conexao = new mysqli("127.0.0.1", "root", "", "lojacosmeticos");
 
- $sql = "SELECT tipo, imagens FROM produtos ";
+ $sql = "SELECT tipo, imagens, categoria_id, nome, preco FROM produtos WHERE categoria_id = '15'";
 
  $resultado = $conexao->query($sql);
 if ($resultado && $resultado->num_rows > 0)
     {
       while ($linha = $resultado->fetch_assoc())
     {
-        echo      "<div class='box'>
+        echo    "<div style='display: inline-block'>
+                  <div style='width: 200px'>
+                  <div class='box'>
                         <button class='add-to-cart-btn'>Adicionar</button>
                         <a href=''>
                           <div class='img-box'>
                             <img src='data:" . $linha['tipo'] . ";base64," . $linha['imagens'] . "' />
                           </div>
                           <div class='detail-box'>
-                            <h6>Sabonete Mirtilo</h6>
-                            <h6>Preço <span>$80</span></h6>
+                            <h6>" . $linha['nome'] . "</h6>
+                            <h6><span>R$</span>" . $linha['preco'] . "</h6>
                           </div>
                           <div class='new'><span>New</span></div>
                         </a> 
+                  </div>
+                  </div>
+                  </div>
                   ";
     }
 }
@@ -83,7 +89,7 @@ $conexao->close();
 
 ?>
                 </div>
-              </section>;
+</section>;
 
 
   <!-- Seção info -->

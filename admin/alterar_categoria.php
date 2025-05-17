@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html>
 
@@ -41,23 +39,26 @@
     <div class="container px-0">
       <div class="heading_container ">
         <h2 class="">
-          Exclusão de produtos
+          Atualização de categorias
         </h2>
       </div>
     </div>
     <div class="container container-bg">
       <div class="row">
         <div class="col-md-6 col-lg-5 px-0">
-          <form action="deletar_produto_banco.php" method="POST" enctype="multipart/form-data">  
+          <form action="alterar_categoria_banco.php" method="POST" enctype="multipart/form-data">
             <div>
+                <h4>ID</h4>
+              <input type="number" name="id" placeholder="ID da categoria"/>
+            </div>
             <div>
-            <h4>Produto</h4>
-              <input type="text" name="produto" placeholder="Nome do produto"/>
+                <h4>Categoria</h4>
+              <input type="text" name="categoria" placeholder="Novo nome da categoria"/>
             </div>
-            </div>
+            
             <div class="d-flex ">
               <button type="submit">
-                Excluir🗑️
+                Salvar
               </button>
             </div>
           </form>

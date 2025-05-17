@@ -41,7 +41,7 @@
     <div class="container px-0">
       <div class="heading_container ">
         <h2 class="">
-          Cadastro de categorias
+          Exclusão de categorias
         </h2>
       </div>
     </div>
@@ -104,21 +104,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
   </script>
   <script src="js/custom.js"></script>
-
-  <script>
-    // Função para exibir o nome do arquivo selecionado
-    function mostrarProdutoSelecionado() {
-        const fileInput = document.getElementById('produtoFile');
-        const produtoSelecionado = document.getElementById('produtoSelecionado');
-        
-        if (fileInput.files.length > 0) {
-            produtoSelecionado.textContent = 'Produto Selecionado: ' + fileInput.files[0].name;
-        } else {
-            produtoSelecionado.textContent = 'Nenhum produto selecionado';
-        }
-    }
-  </script>
-
+  
 </body>
 
 </html>
