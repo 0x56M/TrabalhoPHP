@@ -31,13 +31,10 @@
             <li class="nav-item active"><a class="nav-link" href="shop.php">Sabonetes</a></li>
             <li class="nav-item"><a class="nav-link" href="why.php">Serums</a></li>
             <li class="nav-item"><a class="nav-link" href="testimonial.html">Feedbacks</a></li>
-            <li class="nav-item"><a class="nav-link" href="contact.html">Contato</a></li>
           </ul>
           <div class="user_option">
-            <a href=""><i class="fa fa-user" aria-hidden="true"></i><span>Login</span></a>
-            <a href="carrinho.html"><i class="fa fa-shopping-bag" aria-hidden="true"></i></a>
+            <a href="carrinho.php"><i class="fa fa-shopping-bag" aria-hidden="true"></i></a>
             <form class="form-inline">
-              <button class="btn nav_search-btn" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
             </form>
           </div>
         </div>
@@ -67,7 +64,7 @@ if ($resultado && $resultado->num_rows > 0)
         echo    "<div style='display: inline-block'>
                   <div style='width: 200px'>
                   <div class='box'>
-                        <button class='add-to-cart-btn'>Adicionar</button>
+                        <a href='adicionar_carrinho.php'><button class='add-to-cart-btn'>Adicionar</button></a>
                         <a href=''>
                           <div class='img-box'>
                             <img src='data:" . $linha['tipo'] . ";base64," . $linha['imagens'] . "' />
