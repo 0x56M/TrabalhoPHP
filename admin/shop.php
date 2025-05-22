@@ -64,7 +64,14 @@ if ($resultado && $resultado->num_rows > 0)
         echo    "<div style='display: inline-block'>
                   <div style='width: 200px'>
                   <div class='box'>
-                        <a href='adicionar_carrinho.php'><button class='add-to-cart-btn'>Adicionar</button></a>
+                        <form method='POST' action='adicionar_carrinho.php' enctype='multipart/form-data'>
+                          <input type='hidden' name='nome' value='" . $linha['nome'] . "'>
+                          <input type='hidden' name='preco' value='" . $linha['preco'] . "'>
+                          <input type='hidden' name='categoria_id' value='" . $linha['categoria_id'] . "'>
+                          <input type='hidden' name='tipo' value='" . $linha['tipo'] . "'>
+                          <input type='hidden' name='imagem' value='" . $linha['imagens'] . "'>
+                          <button type='submit' class='add-to-cart-btn'>Adicionar</button>
+                        </form>
                         <a href=''>
                           <div class='img-box'>
                             <img src='data:" . $linha['tipo'] . ";base64," . $linha['imagens'] . "' />
@@ -89,7 +96,6 @@ $conexao->close();
 </section>;
 
 
-  <!-- Seção info -->
   <section class="info_section layout_padding2-top">
     <div class="info_container">
       <div class="container">
@@ -125,7 +131,6 @@ $conexao->close();
   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
   <script src="js/custom.js"></script>
 
-  <!-- CSS dos botões "Adicionar" -->
   <style>
     .add-to-cart-btn {
       position: absolute;

@@ -85,16 +85,14 @@ foreach($_SESSION['carrinho'] as $produto)
         echo      "<div style='display: inline-block'>
                   <div style='width: 200px'>
                   <div class='box'>
-                        <button class='add-to-cart-btn'>Adicionar</button>
                         <a href=''>
                           <div class='img-box'>
                             <img src='data:" . $produto['tipo'] . ";base64," . $produto['imagens'] . "' />
                           </div>
                           <div class='detail-box'>
-                            <h6>Sabonete Mirtilo</h6>
-                            <h6>Preço <span>$80</span></h6>
+                            <h6></h6>
+                            <h6>Preço <span></span></h6>
                           </div>
-                          <div class='new'><span>New</span></div>
                         </a> 
                   </div>
                   </div>
@@ -133,8 +131,11 @@ foreach($_SESSION['carrinho'] as $produto)
           </div>
         </div>
       </section>
-    
+
       <script src="js/jquery-3.4.1.min.js"></script>
       <script src="js/bootstrap.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
       <script src="js/custom.js"></script>
+
+  </body>
+  </html>

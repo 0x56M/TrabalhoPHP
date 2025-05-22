@@ -75,8 +75,6 @@
               <input type="number" name="preco" placeholder="Preço do Produto" />
             </div>
             
-            
-            <!-- Novo campo para selecionar o produto -->
             <div>
                 <h4>Selecione um Produto</h4>
                 <button type="button" onclick="document.getElementById('produtoFile').click()">Escolher Produto</button>
