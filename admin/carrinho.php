@@ -80,18 +80,23 @@
 
 session_start();
 
+include("banco.php");
+
+$sql = "SELECT tipo, imagens, nome, preco FROM produtos";
+
 foreach($_SESSION['carrinho'] as $produto)
 {
         echo      "<div style='display: inline-block'>
                   <div style='width: 200px'>
                   <div class='box'>
+                  <button type='submit' class='btn btn-danger'>Remover</button>
                         <a href=''>
                           <div class='img-box'>
-                            <img src='data:" . $produto['tipo'] . ";base64," . $produto['imagens'] . "' />
+                            <img src='data:" . $produto['tipo'] . ";base64," . $produto['imagem'] . "' />
                           </div>
                           <div class='detail-box'>
-                            <h6></h6>
-                            <h6>Preço <span></span></h6>
+                            <h6>" . $produto['nome'] . "</h6>
+                            <h6>R$<span></span>" . $produto['preco'] . "</h6>
                           </div>
                         </a> 
                   </div>

@@ -76,22 +76,16 @@
     </div>
   </section>
 
-  <!-- end contact section -->
-
-  <!-- info section -->
-
   <section class="info_section layout_padding2-top">
     <div class="info_container">
       <div class="container">
         <div class="row">
-          <!-- Sobre nós -->
           <div class="col-md-6">
             <h6>Sobre nós</h6>
             <p>
               Existimos para criar uma rotina skincare mais completa com a praticidade de fazer os pedidos com entrega garantida e rápida.
             </p>
           </div>
-          <!-- Contact Us -->
           <div class="col-md-6">
             <h6>Contato</h6>
             <ul style="list-style: none; padding: 0;">
@@ -113,15 +107,29 @@
       </div>
     </div>
 
-  <!-- end info section -->
-
-
   <script src="js/jquery-3.4.1.min.js"></script>
   <script src="js/bootstrap.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
   </script>
   <script src="js/custom.js"></script>
 
+  <style>
+    .botao-link {
+  display: inline-block;
+  background-color: #f7444e;  /* cor de fundo */
+  color: #fff;                /* cor do texto */
+  padding: 10px 20px;
+  margin: 5px 10px 10px 0;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.botao-link:hover {
+  background-color: #c6333d;  /* cor ao passar o mouse */
+  color: #fff;
+}
+</style>
 
 </body>
 

@@ -48,6 +48,7 @@
                 <div class='container'>
                   <div class='heading_center'>
                   <h2>Sabonetes</h2>
+                </div>
                   
 
  <?php
@@ -88,13 +89,16 @@ if ($resultado && $resultado->num_rows > 0)
                   ";
     }
 }
+else
+{
+  echo "<br> <br> <br> Não há produtos no carrinho";
+}
 
 $conexao->close();
 
 ?>
                 </div>
 </section>;
-
 
   <section class="info_section layout_padding2-top">
     <div class="info_container">
@@ -136,7 +140,7 @@ $conexao->close();
       position: absolute;
       top: 10px;
       right: 10px;
-      background-color: #f7444e;
+      background-color:rgb(39, 97, 255);
       color: white;
       border: none;
       padding: 5px 10px;
