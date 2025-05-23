@@ -1,3 +1,15 @@
+<?php
+
+  session_start();
+  if(!isset($_SESSION['login']) || !isset($_SESSION['senha']))
+  {
+    header('location:index.html');
+    exit();
+  }
+  session_unset();
+
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -42,7 +54,7 @@
     <div class="container px-0">
       <div class="heading_container ">
         <h2 class="">
-          Área de cadastros
+          Área administrativa
         </h2>
       </div>
     </div>

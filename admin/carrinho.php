@@ -84,12 +84,15 @@ include("banco.php");
 
 $sql = "SELECT tipo, imagens, nome, preco FROM produtos";
 
-foreach($_SESSION['carrinho'] as $produto)
+foreach($_SESSION['carrinho'] as $indice => $produto)
 {
         echo      "<div style='display: inline-block'>
                   <div style='width: 200px'>
                   <div class='box'>
+                  <form method='POST' action='remover_carrinho.php'>
+                  <input type='hidden' name='indice' value='$indice'>
                   <button type='submit' class='btn btn-danger'>Remover</button>
+                  </form>
                         <a href=''>
                           <div class='img-box'>
                             <img src='data:" . $produto['tipo'] . ";base64," . $produto['imagem'] . "' />

@@ -2,20 +2,27 @@
 
 session_start();
 
-$login = $_POST['login'];
-$senha = $_POST['senha'];
+$conexao = new mysqli("127.0.0.1", "root", "", "lojacosmeticos");
 
-    if($login == 'admin' and $senha == 'admin')
+$login = @$_POST['login'];
+$senha = @$_POST['senha'];
+
+$sql = "SELECT * FROM usuarios WHERE login = '$login' AND senha = '$senha'";
+
+$resultado = $conexao->query($sql);
+
+    if($resultado->num_rows > 0)
     {
         $_SESSION['login'] = $login;
         $_SESSION['senha'] = $senha;
-        header("location:/TrabalhoPHP/admin/cadastro.php");
+        header("location:cadastro.php");
     }
     else
     {
-        unset($_SESSION['login']);
-        unset($_SESSION['senha']);
+        session_unset();
+        session_destroy();
         header('location:login.php');
+        exit();
     }
 
 ?>
