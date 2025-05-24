@@ -8,10 +8,9 @@ session_start();
     $categoria_produto = @$_POST['categoria_id'];
     $imagem = @$_POST['imagem'];
     $tipo = @$_POST['tipo'];
+    $idProduto = @$_POST['id'];
 
-    //$imagem_blob = base64_encode(file_get_contents($imagem));
-
-    //inicializa o carrinho caso ele não esteja inicializado
+    //inicializa a sessão carrinho caso ele não esteja inicializado
     if(!isset($_SESSION['carrinho']))
     {
         $_SESSION['carrinho'] = array();
@@ -19,7 +18,7 @@ session_start();
 
     //Cria uma sessão para armazenar no carrinho os itens escolhidos
     //O operador "[]" adiciona o produto no próximo índice disponível no array
-    if($nome_produto && $preco_produto && $categoria_produto && $imagem && $tipo)
+    if($nome_produto && $preco_produto && $categoria_produto && $imagem && $tipo && $idProduto)
     {
         $_SESSION['carrinho'][] = array
         (  
@@ -27,11 +26,11 @@ session_start();
             'preco' => $preco_produto,
             'categoria_id' => $categoria_produto,
             'imagem' => $imagem,
-            'tipo' => $tipo
+            'tipo' => $tipo,
+            'id' => $idProduto
         );
     }
     
     header('location:carrinho.php');
-
 
 ?>

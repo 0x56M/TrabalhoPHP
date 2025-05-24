@@ -107,7 +107,6 @@
   <script src="js/custom.js"></script>
 
   <script>
-    // Função para exibir o nome do arquivo selecionado
     function mostrarProdutoSelecionado() {
         const fileInput = document.getElementById('produtoFile');
         const produtoSelecionado = document.getElementById('produtoSelecionado');

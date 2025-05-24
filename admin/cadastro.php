@@ -57,6 +57,11 @@
           Área administrativa
         </h2>
       </div>
+      <div class="heading_container ">
+        <button style='margin-bottom: 10px; margin-right: 10px' type="submit">
+          <a href="relatorio_vendas.php">Relatório de vendas</a>
+        </button>
+      </div>
     </div>
     <div class="container container-bg">
       <div class="row">
@@ -128,8 +133,8 @@
   <style>
     .botao-link {
   display: inline-block;
-  background-color: #f7444e;  /* cor de fundo */
-  color: #fff;                /* cor do texto */
+  background-color: #f7444e;
+  color: #fff;
   padding: 10px 20px;
   margin: 5px 10px 10px 0;
   text-decoration: none;
@@ -138,7 +143,7 @@
 }
 
 .botao-link:hover {
-  background-color: #c6333d;  /* cor ao passar o mouse */
+  background-color: #c6333d; 
   color: #fff;
 }
 </style>
@@ -146,6 +151,5 @@
 </body>
 
 </html>
-
 
 

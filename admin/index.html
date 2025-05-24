@@ -2,36 +2,49 @@
 <html>
 
 <head>
-  <!-- Basic -->
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <!-- Mobile Metas -->
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <!-- Site Metas -->
   <meta name="keywords" content="" />
   <meta name="description" content="" />
   <meta name="author" content="" />
   <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+      <a class="carousel-control-prev" href="#customCarousel2" role="button" data-slide="prev">
+        <i class="fa fa-angle-left" aria-hidden="true" style="font-size: 30px;"></i>
+        <span class="sr-only">Anterior</span>
+      </a>
+      <a class="carousel-control-next" href="#customCarousel2" role="button" data-slide="next">
+        <i class="fa fa-angle-right" aria-hidden="true" style="font-size: 30px;"></i>
+        <span class="sr-only">Próximo</span>
+      </a>
+    </div>
+  </div>
+</section>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+<script>
+  $('#customCarousel2').carousel({
+    interval: 5000
+  });
+</script>
 
   <title>
     Cosméticos
   </title>
 
-  <!-- slider stylesheet -->
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
-
-  <!-- bootstrap core css -->
   <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
-
-  <!-- Custom styles for this template -->
   <link href="css/style.css" rel="stylesheet" />
-  <!-- responsive style -->
   <link href="css/responsive.css" rel="stylesheet" />
 </head>
 
 <body>
   <div class="hero_area">
-    <!-- header section strats -->
     <header class="header_section">
       <nav class="navbar navbar-expand-lg custom_nav-container ">
         <a class="navbar-brand" href="index.html">
@@ -364,109 +377,58 @@
     </div>
   </section>
 
-  <section class="gift_section layout_padding-bottom">
-    <div class="box ">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-md-5">
-            <div class="img_container">
-              <div class="img-box">
-                <img src="images/gifts.png" alt="">
-              </div>
-            </div>
-          </div>
-          <div class="col-md-7">
-            <div class="detail-box">
-              <div class="heading_container">
-                <h2>
-                  Presenteie <br>
-                  aquele que você ama!
-                </h2>
-              </div>
-              <p>
-                Monte um kit skincare para quem você ama e faça o dia dessa pessoa mais feliz!
-              </p>
-              <div class="btn-box">
-                <a href="#" class="btn1">
-                  Compre agora
-                </a>
-                <a href="#" class="btn2">
-                  Veja mais
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <section class="client_section layout_padding">
-    <div class="container">
-      <div class="heading_container heading_center">
-        <h2>
-          Feedbacks
-        </h2>
-      </div>
+  <div class="container">
+    <div class="heading_container heading_center">
+      <h2>Feedbacks</h2>
     </div>
-    <div class="container px-0">
-      <div id="customCarousel2" class="carousel  carousel-fade" data-ride="carousel">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <div class="box">
-              <div class="client_info">
-                <div class="client_name">
-                  <h5>
-                    Ana Laura
-                  </h5>
-                  <h6>
-                    Maringá- São Paulo
-                  </h6>
-                </div>
-                <i class="fa fa-quote-left" aria-hidden="true"></i>
+  </div>
+  <div class="container px-0">
+    <div id="customCarousel2" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="box">
+            <div class="client_info">
+              <div class="client_name">
+                <h5>Ana Laura</h5>
+                <h6>Maringá - São Paulo</h6>
               </div>
-              <p>
-                Eu simplesmente amei os produtos! Vi o resultado em 1 semana de uso, uso e indico para todos! amei 
-              </p>
+              <i class="fa fa-quote-left" aria-hidden="true"></i>
             </div>
-          </div>
-          <div class="carousel-item">
-            <div class="box">
-              <div class="client_info">
-                <div class="client_name">
-                  <h5>
-                    Laiza
-                  </h5>
-                  <h6>
-                    Bauru- São Paulo
-                  </h6>
-                </div>
-                <i class="fa fa-quote-left" aria-hidden="true"></i>
-              </div>
-              <p>
-                Sempre busquei um site que as entregas e os pedidos fossem feitos de maneira rápida e prática, finalmente encontrei. Amo.
-              </p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div class="box">
-              <div class="client_info">
-                <div class="client_name">
-                  <h5>
-                    Rodrigo Escobar
-                  </h5>
-                  <h6>
-                    Professor ITE
-                  </h6>
-                </div>
-                <i class="fa fa-quote-left" aria-hidden="true"></i>
-              </div>
-              <p>
-                Nossaaaaa menina, eu ameiiii os sabonetes!!! babadooo, tudo, amo!
-              </p>
-            </div>
+            <p>
+              Eu simplesmente amei os produtos! Vi o resultado em 1 semana de uso, uso e indico para todos! amei
+            </p>
           </div>
         </div>
+        <div class="carousel-item">
+          <div class="box">
+            <div class="client_info">
+              <div class="client_name">
+                <h5>Laiza</h5>
+                <h6>Bauru - São Paulo</h6>
+              </div>
+              <i class="fa fa-quote-left" aria-hidden="true"></i>
+            </div>
+            <p>
+              Sempre busquei um site que as entregas e os pedidos fossem feitos de maneira rápida e prática, finalmente encontrei. Amo.
+            </p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="box">
+            <div class="client_info">
+              <div class="client_name">
+                <h5>Rodrigo Escobar</h5>
+                <h6>Professor ITE</h6>
+              </div>
+              <i class="fa fa-quote-left" aria-hidden="true"></i>
+            </div>
+            <p>
+              Nossaaaaa menina, eu ameiiii os sabonetes!!! babadooo, tudo, amo!
+            </p>
+          </div>
+        </div>
+      </div>
         <div class="carousel_btn-box">
           <a class="carousel-control-prev" href="#customCarousel2" role="button" data-slide="prev">
             <i class="fa fa-angle-left" aria-hidden="true"></i>
@@ -480,22 +442,17 @@
       </div>
     </div>
   </section>
-  <!-- end client section -->
-
-  <!-- info section -->
 
   <section class="info_section layout_padding2-top">
     <div class="info_container">
       <div class="container">
         <div class="row">
-          <!-- Sobre nós -->
           <div class="col-md-6">
             <h6>Sobre nós</h6>
             <p>
               Existimos para criar uma rotina skincare mais completa com a praticidade de fazer os pedidos com entrega garantida e rápida.
             </p>
           </div>
-          <!-- Contact Us -->
           <div class="col-md-6">
             <h6>Contact Us</h6>
             <ul style="list-style: none; padding: 0;">
@@ -516,8 +473,6 @@
         </div>
       </div>
     </div>
-  
-    <!-- footer section -->
     <footer class="footer_section">
       <div class="container">
         <p>
@@ -526,11 +481,6 @@
         </p>
       </div>
     </footer>
-    <!-- footer section -->
   </section>
-  
-    
-    <!-- footer section -->
   </section>
-
 

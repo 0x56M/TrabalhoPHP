@@ -82,10 +82,15 @@ session_start();
 
 include("banco.php");
 
-$sql = "SELECT tipo, imagens, nome, preco FROM produtos";
+$total = 0;
 
-foreach($_SESSION['carrinho'] as $indice => $produto)
+$sql = "SELECT id, tipo, imagens, nome, preco FROM produtos";
+
+if (isset($_SESSION['carrinho']) && is_array($_SESSION['carrinho']) && count($_SESSION['carrinho']) > 0) {
+    foreach($_SESSION['carrinho'] as $indice => $produto)
 {
+   $total += $produto['preco'];
+
         echo      "<div style='display: inline-block'>
                   <div style='width: 200px'>
                   <div class='box'>
@@ -99,7 +104,7 @@ foreach($_SESSION['carrinho'] as $indice => $produto)
                           </div>
                           <div class='detail-box'>
                             <h6>" . $produto['nome'] . "</h6>
-                            <h6>R$<span></span>" . $produto['preco'] . "</h6>
+                            <h6>R$<span></span>" . number_format($produto['preco'], 2, ',', '.') . "</h6>
                           </div>
                         </a> 
                   </div>
@@ -107,6 +112,16 @@ foreach($_SESSION['carrinho'] as $indice => $produto)
                   </div>
                   ";
     }
+    echo "<div style='margin-top: 20px; text-align: center; font-size: 18px; font-weight: bold;'>
+        Total: R$ " . number_format($total, 2, ',', '.') . "
+        <form action='finalizar_compra.php' method='POST' style='display: inline-block; margin-left: 40px; margin-bottom:40px'>
+          <button type='submit' class='btn btn-success'>Comprar</button>
+      </div>";
+  }
+else 
+{
+    echo "<p style='text-align: center; font-size: 18px;'>Seu carrinho está vazio.</p>";
+}
 
 ?>
 

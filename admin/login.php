@@ -25,17 +25,17 @@
 </head>
 <style>
             body {
-                height: 100vh; /* Altura da tela */
-                margin: 0;     /* Remove margens padrão */
-                display: flex;   /* Ativa o Flexbox no body */
-                justify-content: center; /* Centraliza horizontalmente */
-                align-items: center;   /* Centraliza verticalmente */
+                height: 100vh;
+                margin: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
             } 
 </style>
 
 <body>
   <div class="">
-    <!-- header section strats -->
+
     <header class="header_section">
       <nav class="navbar navbar-expand-lg custom_nav-container ">
         <a class="navbar-brand" href="index.html">

@@ -4,12 +4,9 @@
 <html>
 
 <head>
-  <!-- Basic -->
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <!-- Mobile Metas -->
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <!-- Site Metas -->
   <meta name="keywords" content="" />
   <meta name="description" content="" />
   <meta name="author" content="" />
@@ -18,22 +15,14 @@
   <title>
     Cosméticos
   </title>
-
-  <!-- slider stylesheet -->
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
-
-  <!-- bootstrap core css -->
   <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
-
-  <!-- Custom styles for this template -->
   <link href="css/style.css" rel="stylesheet" />
-  <!-- responsive style -->
   <link href="css/responsive.css" rel="stylesheet" />
 </head>
 
 <body>
   <div class="hero_area">
-    <!-- header section strats -->
     <header class="header_section">
       <nav class="navbar navbar-expand-lg custom_nav-container ">
         <a class="navbar-brand" href="index.html">
@@ -43,12 +32,8 @@
         </a>
       </nav>
     </header>         </li>
-          
-    <!-- end header section -->
-  </div>
-  <!-- end hero area -->
 
-  <!-- contact section -->
+  </div>
 
   <section class="contact_section layout_padding">
     <div class="container px-0">
@@ -97,14 +82,12 @@
     <div class="info_container">
       <div class="container">
         <div class="row">
-          <!-- Sobre nós -->
           <div class="col-md-6">
             <h6>Sobre nós</h6>
             <p>
               Existimos para criar uma rotina skincare mais completa com a praticidade de fazer os pedidos com entrega garantida e rápida.
             </p>
           </div>
-          <!-- Contact Us -->
           <div class="col-md-6">
             <h6>Contato</h6>
             <ul style="list-style: none; padding: 0;">
