@@ -2,7 +2,7 @@
 
 session_start();
 
-$conexao = new mysqli("127.0.0.1", "root", "", "lojacosmeticos2");
+$conexao = new mysqli("127.0.0.1", "root", "", "lojacosmeticos");
 
 $login = @$_POST['login'];
 $senha = @$_POST['senha'];

@@ -9,15 +9,15 @@
 
     var_dump(@$_FILES["produto_arquivo"]);
     
-    //$imagem_blob = base64_encode(file_get_contents($imagem));
+    $imagem_blob = base64_encode(file_get_contents($imagem));
 
     //2 - Abrir uma conexão com o banco
-    $conexao = new mysqli("127.0.0.1", "root", "", "lojacosmeticos2");
+    $conexao = new mysqli("127.0.0.1", "root", "", "lojacosmeticos");
 
     //3 - Inserir no banco de dados
 
     $sql = "INSERT INTO produtos(nome, preco, categoria_id, tipo, imagens)
-            VALUES ('$nomeProduto', '$precoProduto', '$idCategoria', '$tipo', '$imagem')
+            VALUES ('$nomeProduto', '$precoProduto', '$idCategoria', '$tipo', '$imagem_blob')
             ";
 
     $conexao->query($sql);

@@ -53,9 +53,9 @@
 
  <?php
 
- $conexao = new mysqli("127.0.0.1", "root", "", "lojacosmeticos2");
+ $conexao = new mysqli("127.0.0.1", "root", "", "lojacosmeticos");
 
- $sql = "SELECT id, tipo, imagens, categoria_id, nome, preco FROM produtos WHERE categoria_id = '2'";
+ $sql = "SELECT id, tipo, imagens, categoria_id, nome, preco FROM produtos WHERE categoria_id = '16'";
 
  $resultado = $conexao->query($sql);
 
@@ -74,14 +74,13 @@ if ($resultado && $resultado->num_rows > 0)
                           <input type='hidden' name='preco' value='" . $linha['preco'] . "'>
                           <input type='hidden' name='categoria_id' value='" . $linha['categoria_id'] . "'>
                           <input type='hidden' name='tipo' value='" . $linha['tipo'] . "'>
-                          <input type='hidden' name='nome' value='" . $linha['nome'] . "'>
                           <input type='hidden' name='id' value='" . $linha['id'] . "'>
-                          <input type='hidden' name='imagem' value='" . $imagem64 . "'>
+                          <input type='hidden' name='imagem' value='" . $linha['imagens'] . "'>
                           <button type='submit' class='add-to-cart-btn'>Adicionar</button>
                         </form>
                         <a href=''>
                           <div class='img-box'>
-                            <img src='data:" . $linha['tipo'] . ";base64," . $imagem64 . "' />
+                            <img src='data:" . $linha['tipo'] . ";base64," . $linha['imagens'] . "' />
                           </div>
                           <div class='detail-box'>
                             <h6>" . $linha['nome'] . "</h6>

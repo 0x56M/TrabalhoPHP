@@ -41,7 +41,7 @@
 
       <?php
       $host = 'localhost';
-      $banco = 'lojacosmeticos2';
+      $banco = 'lojacosmeticos';
       $usuario = 'root';
       $senha = '';
       $conexao = new PDO("mysql:host=$host;dbname=$banco;charset=utf8", $usuario, $senha);

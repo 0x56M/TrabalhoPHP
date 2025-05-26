@@ -41,11 +41,14 @@
   <div class="hero_area">
     <header class="header_section">
       <nav class="navbar navbar-expand-lg custom_nav-container ">
-        <a class="navbar-brand" href="index.html">
-          <span>
-            Cosméticos 
-          </span>
-        </a>
+          <a class="navbar-brand" href="index.html">
+            <span>
+              Cosméticos 
+            </span>
+          </a>
+          <div class="ml-auto">
+            <a href="logout.php" class="botao-link">Logout</a>
+          </div>
       </nav>
     </header>
   </div>

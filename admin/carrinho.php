@@ -106,7 +106,7 @@ if (isset($_SESSION['carrinho']) && is_array($_SESSION['carrinho']) && count($_S
                             <h6>" . $produto['nome'] . "</h6>
                             <h6>R$<span></span>" . number_format($produto['preco'], 2, ',', '.') . "</h6>
                           </div>
-                        </a> 
+                        </a>
                   </div>
                   </div>
                   </div>
