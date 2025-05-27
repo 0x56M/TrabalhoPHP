@@ -136,7 +136,7 @@
   <style>
     .botao-link {
   display: inline-block;
-  background-color: #f7444e;
+  background-color:rgb(206, 120, 170);
   color: #fff;
   padding: 10px 20px;
   margin: 5px 10px 10px 0;
@@ -146,7 +146,7 @@
 }
 
 .botao-link:hover {
-  background-color: #c6333d; 
+  background-color:rgb(201, 83, 152);
   color: #fff;
 }
 </style>

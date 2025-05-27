@@ -6,6 +6,7 @@
     $imagem = @$_FILES["produto_arquivo"]["tmp_name"];
     $idCategoria = @$_POST["idCategoria"];
     $tipo = @$_FILES["produto_arquivo"]["type"];
+    $descricao = @$_POST["descricao"];
 
     var_dump(@$_FILES["produto_arquivo"]);
     
@@ -16,8 +17,8 @@
 
     //3 - Inserir no banco de dados
 
-    $sql = "INSERT INTO produtos(nome, preco, categoria_id, tipo, imagens)
-            VALUES ('$nomeProduto', '$precoProduto', '$idCategoria', '$tipo', '$imagem_blob')
+    $sql = "INSERT INTO produtos(nome, preco, categoria_id, tipo, imagens, descricao)
+            VALUES ('$nomeProduto', '$precoProduto', '$idCategoria', '$tipo', '$imagem_blob', '$descricao')
             ";
 
     $conexao->query($sql);

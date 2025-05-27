@@ -59,6 +59,10 @@
                 <h4>Preço</h4>
               <input type="number" name="preco" placeholder="Preço do Produto" />
             </div>
+            <div>
+                <h4>Descrição</h4>
+              <input type="text" name="descricao" placeholder="Descrição do Produto" />
+            </div>
             
             <div>
                 <h4>Selecione um Produto</h4>

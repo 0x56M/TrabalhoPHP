@@ -47,7 +47,7 @@
  <section class='shop_section layout_padding'>
                 <div class='container'>
                   <div class='heading_center'>
-                  <h2>Sabonetes</h2>
+                  <h2>Serums</h2>
                 </div>
                   
 
@@ -78,7 +78,7 @@ if ($resultado && $resultado->num_rows > 0)
                           <input type='hidden' name='imagem' value='" . $linha['imagens'] . "'>
                           <button type='submit' class='add-to-cart-btn'>Adicionar</button>
                         </form>
-                        <a href=''>
+                        <a href='detalhes_produto.php?id=" . $linha['id'] . "'>
                           <div class='img-box'>
                             <img src='data:" . $linha['tipo'] . ";base64," . $linha['imagens'] . "' />
                           </div>
