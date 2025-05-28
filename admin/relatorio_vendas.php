@@ -47,7 +47,7 @@
       $conexao = new PDO("mysql:host=$host;dbname=$banco;charset=utf8", $usuario, $senha);
 
       //verifica se o id existe, e exclui os itens da venda e as vendas
-      if (isset($_POST['delete_id'])) 
+      if (isset($_POST['delete_id']))
       {
         $id = $_POST['delete_id'];
         $conexao->query("DELETE FROM vendas_itens WHERE venda_id = $id");

@@ -1,13 +1,10 @@
 <?php
+session_start();
 
-  session_start();
-  if(!isset($_SESSION['login']) || !isset($_SESSION['senha']))
-  {
-    header('location:index.html');
+if (!isset($_SESSION['login']) || empty($_SESSION['login'])) {
+    header('Location: index.html');
     exit();
-  }
-  session_unset();
-
+}
 ?>
 
 <!DOCTYPE html>

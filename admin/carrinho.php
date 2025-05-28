@@ -86,8 +86,10 @@ $total = 0;
 
 $sql = "SELECT id, tipo, imagens, nome, preco FROM produtos";
 
+//verifica se existe o carrinho, se é um array e se possui itens dentro do carrinho
 if (isset($_SESSION['carrinho']) && is_array($_SESSION['carrinho']) && count($_SESSION['carrinho']) > 0) {
-    foreach($_SESSION['carrinho'] as $indice => $produto)
+  //percorre todo o array indicando os indices
+  foreach($_SESSION['carrinho'] as $indice => $produto)
 {
    $total += $produto['preco'];
 
